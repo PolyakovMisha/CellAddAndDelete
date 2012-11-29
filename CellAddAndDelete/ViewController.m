@@ -67,14 +67,24 @@
 
 -(BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSString *str1=[[myArray objectAtIndex:indexPath.row]retain];
+    if ([str1 isEqual:@"Sasha"]||[str1 isEqual:@"Misha"]==YES) {
+        return NO;
+    }
     return YES;
 }
 
 
 -(void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
 {
-    [myArray exchangeObjectAtIndex:sourceIndexPath.row withObjectAtIndex:destinationIndexPath.row];
+   // [myArray exchangeObjectAtIndex:sourceIndexPath.row withObjectAtIndex:destinationIndexPath.row];
+    NSString *str1=[[myArray objectAtIndex:sourceIndexPath.row]retain];
+    [myArray removeObjectAtIndex:sourceIndexPath.row];
+    [myArray insertObject:str1 atIndex:destinationIndexPath.row];
+    [str1 release];
+    
 }
+
 
 
 -(void) openMyView
