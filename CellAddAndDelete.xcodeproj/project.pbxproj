@@ -17,8 +17,6 @@
 		8C8577A615A9B8DF00360000 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C8577A415A9B8DF00360000 /* ViewController.xib */; };
 		8C8577B715A9F37A00360000 /* MYView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C8577B515A9F37800360000 /* MYView.m */; };
 		8C8577B815A9F37A00360000 /* MYView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C8577B615A9F37900360000 /* MYView.xib */; };
-		8C91E63015B92A3400150BC0 /* ViewChange.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C91E62E15B92A3400150BC0 /* ViewChange.m */; };
-		8C91E63115B92A3400150BC0 /* ViewChange.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C91E62F15B92A3400150BC0 /* ViewChange.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,9 +36,6 @@
 		8C8577B415A9F37700360000 /* MYView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYView.h; sourceTree = "<group>"; };
 		8C8577B515A9F37800360000 /* MYView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYView.m; sourceTree = "<group>"; };
 		8C8577B615A9F37900360000 /* MYView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MYView.xib; sourceTree = "<group>"; };
-		8C91E62D15B92A3400150BC0 /* ViewChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewChange.h; sourceTree = "<group>"; };
-		8C91E62E15B92A3400150BC0 /* ViewChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewChange.m; sourceTree = "<group>"; };
-		8C91E62F15B92A3400150BC0 /* ViewChange.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewChange.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,9 +91,6 @@
 				8C8577B415A9F37700360000 /* MYView.h */,
 				8C8577B515A9F37800360000 /* MYView.m */,
 				8C8577B615A9F37900360000 /* MYView.xib */,
-				8C91E62D15B92A3400150BC0 /* ViewChange.h */,
-				8C91E62E15B92A3400150BC0 /* ViewChange.m */,
-				8C91E62F15B92A3400150BC0 /* ViewChange.xib */,
 			);
 			path = CellAddAndDelete;
 			sourceTree = "<group>";
@@ -167,7 +159,6 @@
 				8C85779A15A9B8DF00360000 /* InfoPlist.strings in Resources */,
 				8C8577A615A9B8DF00360000 /* ViewController.xib in Resources */,
 				8C8577B815A9F37A00360000 /* MYView.xib in Resources */,
-				8C91E63115B92A3400150BC0 /* ViewChange.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,7 +173,6 @@
 				8C8577A015A9B8DF00360000 /* AppDelegate.m in Sources */,
 				8C8577A315A9B8DF00360000 /* ViewController.m in Sources */,
 				8C8577B715A9F37A00360000 /* MYView.m in Sources */,
-				8C91E63015B92A3400150BC0 /* ViewChange.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

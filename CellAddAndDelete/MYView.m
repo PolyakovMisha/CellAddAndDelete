@@ -11,10 +11,17 @@
 @implementation MYView
 @synthesize textName;
 @synthesize str1;
-@synthesize myViewVC;
+//@synthesize myViewVC;
+@synthesize delegate;
 
 
 #pragma mark - View lifecycle
+
+- (void)dealloc {
+    [textName release];
+    [str1 release];
+    [super dealloc];
+}
 
 - (void)viewDidLoad
 {
@@ -26,29 +33,6 @@
     textName.keyboardType=UIKeyboardTypeDefault;
     // Do any additional setup after loading the view from its nib.
 }
-
--(id)initWithViewController:(ViewController*)myViewController
-{
-    str1=@"";
-    myViewVC=myViewController;
-    return  self;
-}
-
-+(id)creatMyView:(ViewController*)singleController
-{
-    MYView *singleClass=[[MYView alloc]initWithViewController:singleController];
-    return singleClass;
-}
-
--(id) init;
-{
-    self=[super init];
-    if(self){
-        str1=@"";
-    }
-    return self;
-}
-
 -(IBAction)CancelName:(id)sender
 {
     str1=nil;
@@ -59,29 +43,10 @@
 {
     str1=textField.text;
     NSLog(@"%@", str1);
-  //  goto insertlabel;
-    if ([str1 length]!=0){
-        [myViewVC.myArray addObject:str1];
-        [myViewVC.myTable reloadData];//     [myArray addObject:strMyView.str1];
-        //    [strMyView release];
-        //    [myTable reloadData];
-        [self.navigationController popViewControllerAnimated:YES];
-        return NO;
-    }
-    [self.navigationController popViewControllerAnimated:YES];
-    return NO;
+   if (delegate)[delegate returnMyView];
+    return  0;
 }
-
-/*- (void)textFieldDidEndEditing:(UITextField *)textField
-{
-    str1=textField.text;
-    [self.navigationController popViewControllerAnimated:YES];
     
-}
-*/
-- (void)dealloc {
-    [textName release];
-    [str1 release];
-    [super dealloc];
-}
+
+
 @end

@@ -10,14 +10,24 @@
 
 @implementation ViewController
 
-@synthesize cellInsert;
+//@synthesize cellInsert;
 @synthesize myArray;
-@synthesize cellDelete;
+//@synthesize cellDelete;
 @synthesize myTable;
 //@synthesize insName;
 
 
 #pragma mark - View lifecycle
+
+- (void)dealloc {
+    
+    [myArray release];
+    [cellDelete release];
+    [cellInsert release];
+    [insName release];
+    [str release];
+    [super dealloc];
+}
 
 - (void)viewDidLoad
 {
@@ -25,6 +35,8 @@
      myArray=[[NSMutableArray alloc] initWithObjects:@"Misha",@"Sasha", nil];
    
 }
+
+#pragma mark - creat myTable
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -41,6 +53,8 @@
     return cell;
 }
 
+#pragma mark - audit editStyle
+
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle==UITableViewCellEditingStyleDelete) {
@@ -54,7 +68,6 @@
 }
 
 
-
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editStyle==20) {
@@ -64,6 +77,9 @@
     return UITableViewCellEditingStyleInsert;
    
 }
+
+
+#pragma mark - MoveRow
 
 -(BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -85,31 +101,26 @@
     
 }
 
-
+#pragma mark - InsertRow
 
 -(void) openMyView
 {
-    
-    MYView *insName=[[MYView alloc]initWithViewController:self];//[MYView creatMyView:self];
-    [self.navigationController pushViewController:insName animated:YES];
-
-      
+    insName=[[MYView alloc]initWithNibName:nil bundle:nil];
+    insName.delegate=self;
+    [self.navigationController pushViewController:insName animated:YES];    
 }
 
-
-
--(IBAction)delName:(id)sender
+-(void)returnMyView
 {
-    if ([cellInsert.currentTitle isEqual:@"Done"]==YES) return;
-    editStyle=20;
-    if ([cellDelete.currentTitle isEqual:@"EditDelete"]==YES) {
-        [cellDelete setTitle:@"Done" forState:UIControlStateNormal];
-        [myTable setEditing:YES animated:YES]; 
-    }else{
-        [cellDelete setTitle:@"EditDelete" forState:UIControlStateNormal];
-        [myTable setEditing:NO animated:YES];
-            }
-     
+    str=insName.str1;
+    if ([str length]!=0){
+        [self.myArray addObject:str];
+        [self.myTable reloadData];
+        [self.navigationController popViewControllerAnimated:YES];
+        //  return NO;
+    }
+    [self.navigationController popViewControllerAnimated:YES];
+    //return NO;
 }
 
 -(IBAction)InsName:(id)sender
@@ -122,23 +133,23 @@
     }else{
         [cellInsert setTitle:@"EditInsert" forState:UIControlStateNormal];
         [myTable setEditing:NO animated:YES];
+    } 
+}
+
+#pragma mark - DeleteRow
+
+-(IBAction)delName:(id)sender
+{
+    if ([cellInsert.currentTitle isEqual:@"Done"]==YES) return;
+    editStyle=20;
+    if ([cellDelete.currentTitle isEqual:@"EditDelete"]==YES) {
+        [cellDelete setTitle:@"Done" forState:UIControlStateNormal];
+        [myTable setEditing:YES animated:YES]; 
+    }else{
+        [cellDelete setTitle:@"EditDelete" forState:UIControlStateNormal];
+        [myTable setEditing:NO animated:YES];
     }
- 
+    
 }
 
-
-
-- (void)dealloc {
-
-    [myArray release];
-    [cellDelete release];
-    [cellInsert release];
-  //  [insName release];
-   [super dealloc];
-}
-- (void)viewDidUnload {
-    [self setCellDelete:nil];
-    [self setCellInsert:nil];
-    [super viewDidUnload];
-}
 @end

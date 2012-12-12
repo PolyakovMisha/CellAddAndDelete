@@ -10,20 +10,19 @@
 #import "MYView.h"
 #import "AppDelegate.h"
 
-@interface ViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
+@interface ViewController : UIViewController <UITableViewDataSource,UITableViewDelegate,MyTextFieldProtocol>
 {
     NSInteger editStyle;
     NSMutableArray *myArray;
-    //MYView *insName;
+    NSString *str;
+    MYView *insName;
+    IBOutlet UIButton *cellInsert;
+    IBOutlet UIButton *cellDelete;
+    
 }
 //@property (retain, nonatomic) MYView *insName;
 
-@property (retain, nonatomic) IBOutlet UIButton *cellInsert;
-
 @property (retain, nonatomic) NSMutableArray *myArray;
-
-@property (retain, nonatomic) IBOutlet UIButton *cellDelete;
-
 @property (retain, nonatomic) IBOutlet UITableView *myTable;
 
 
@@ -42,6 +41,7 @@
 
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath;
 
+-(void)returnMyView;
 -(void) openMyView;
 
 @end

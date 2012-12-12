@@ -9,13 +9,13 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "CellAddAndDelete/ViewController.h"
-         timestampString = "363520617.857677"
+         timestampString = "376832012.360873"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "21"
-         endingLineNumber = "21"
-         landmarkName = "cellInsert"
-         landmarkType = "19">
+         startingLineNumber = "23"
+         endingLineNumber = "23"
+         landmarkName = "@interface ViewController"
+         landmarkType = "2">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -23,25 +23,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "CellAddAndDelete/ViewController.m"
-         timestampString = "375862897.523082"
+         timestampString = "376832012.360873"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "93"
-         endingLineNumber = "93"
-         landmarkName = "-openMyView"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "CellAddAndDelete/ViewController.m"
-         timestampString = "368608292.718728"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "47"
-         endingLineNumber = "47"
+         startingLineNumber = "60"
+         endingLineNumber = "60"
          landmarkName = "-tableView:commitEditingStyle:forRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -50,26 +36,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          isPathRelative = "1"
-         filePath = "CellAddAndDelete/ViewController.m"
-         timestampString = "375862897.523082"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "92"
-         endingLineNumber = "92"
-         landmarkName = "-openMyView"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
          filePath = "CellAddAndDelete/MYView.m"
-         timestampString = "363787393.630305"
+         timestampString = "376832012.360873"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "60"
-         endingLineNumber = "60"
+         startingLineNumber = "43"
+         endingLineNumber = "43"
          landmarkName = "-textFieldShouldReturn:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -78,55 +50,13 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          isPathRelative = "1"
-         filePath = "CellAddAndDelete/MYView.m"
-         timestampString = "364302522.677881"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "77"
-         endingLineNumber = "77"
-         landmarkName = "@implementation MYView"
-         landmarkType = "3">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
          filePath = "CellAddAndDelete/ViewController.m"
-         timestampString = "375862897.523082"
+         timestampString = "376832012.360873"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "94"
-         endingLineNumber = "94"
-         landmarkName = "-openMyView"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "CellAddAndDelete/ViewController.m"
-         timestampString = "363520957.602982"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "26"
-         endingLineNumber = "26"
+         startingLineNumber = "35"
+         endingLineNumber = "35"
          landmarkName = "-viewDidLoad"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "CellAddAndDelete/MYView.m"
-         timestampString = "364297658.595352"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "61"
-         endingLineNumber = "61"
-         landmarkName = "-textFieldShouldReturn:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -141,6 +71,20 @@
          startingLineNumber = "25"
          endingLineNumber = "25"
          landmarkName = "-viewDidUnload"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "CellAddAndDelete/ViewChange.m"
+         timestampString = "376830583.264598"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "35"
+         endingLineNumber = "35"
+         landmarkName = "-shouldAutorotateToInterfaceOrientation:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
